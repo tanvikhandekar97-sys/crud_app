@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const UserList = ({setEditUser}) => {
-  const [users, setUsers] = useState([]);
+const UserList = ({setEditUser, users, fetchUsers}) => {
+//   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetchUsers();
@@ -17,22 +17,10 @@ const UserList = ({setEditUser}) => {
       console.log(error);
     }
   };
-
-  const fetchUsers = async () => {
-    try {
-      const res = await fetch("http://localhost:3001/users");
-      const data = await res.json();
-      setUsers(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
     <div className="list-page">
       <h3>User List</h3>
-      {users.map((user) => {
-        return (
+      {users.map((user) => (
           <div className="user-list" key={user.id}>
             <p>
               {user.firstName} {user.lastName}
@@ -42,8 +30,8 @@ const UserList = ({setEditUser}) => {
             <button className="del-button" onClick={() => deleteUser(user.id)}>Delete</button>
             <button className="edit-button" onClick={()=> setEditUser(user)}>Edit</button>
           </div>
-        );
-      })}
+        )
+      )}
     </div>
   );
 };

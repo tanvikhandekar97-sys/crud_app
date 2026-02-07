@@ -1,3 +1,25 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "c978",
+      "firstName": "tanvi",
+      "lastName": "k",
+      "phone": "6565656565",
+      "email": "tanvi@gmail.com"
+    },
+    {
+      "id": "b3e8",
+      "firstName": "chiya",
+      "lastName": "k",
+      "phone": "4545454545",
+      "email": "chiya@mail.com"
+    },
+    {
+      "id": "c670",
+      "firstName": "khl",
+      "lastName": "gkh",
+      "phone": "4141414141",
+      "email": "ghj@gmao.com"
+    }
+  ]
 }

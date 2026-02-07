@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const UserForm = ({ editUser, setEditUser }) => {
+const UserForm = ({ editUser, setEditUser, fetchUsers }) => {
   const [formData, setFormdata] = useState({
     firstName: "",
     lastName: "",
@@ -54,8 +54,8 @@ const UserForm = ({ editUser, setEditUser }) => {
         body: JSON.stringify(formData),
       });
       setEditUser(null);
-
-      alert(editUser ? "User added successfully" : "User added successfully");
+fetchUsers()
+      alert(editUser ? "User updated successfully" : "User added successfully");
       console.log(formData);
       setFormdata({
         firstName: "",
@@ -112,7 +112,7 @@ const UserForm = ({ editUser, setEditUser }) => {
             onChange={handleChange}
           />
         </label>
-        <button className="submit-button" type="submit"> Submit </button>
+        <button className="submit-button" type="submit"> {editUser ? "Update": "Add"} </button>
       </form>
     </div>
   );
