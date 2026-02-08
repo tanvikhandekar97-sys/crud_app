@@ -26,7 +26,7 @@ const UserList = ({setEditUser, users, fetchUsers}) => {
             </p>
             <p>{user.phone}</p>
             <p>{user.email}</p>
-            <button className="del-button" onClick={() => deleteUser(user.id)}>Delete</button>
+            <button className="del-button" onClick={() => deleteUser(user._id)}>Delete</button>
             <button className="edit-button" onClick={()=> setEditUser(user)}>Edit</button>
           </div>
         )

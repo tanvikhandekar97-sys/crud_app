@@ -43,7 +43,7 @@ const UserForm = ({ editUser, setEditUser, fetchUsers }) => {
     }
     try {
       const url = editUser
-        ? `http://localhost:3001/users/${editUser.id}`
+        ? `http://localhost:3001/users/${editUser._id}`
         : "http://localhost:3001/users";
       const method = editUser ? "PUT" : "POST";
       await fetch(url, {
