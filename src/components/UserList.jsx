@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 const UserList = ({setEditUser, users, fetchUsers}) => {
-//   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetchUsers();
