@@ -20,7 +20,7 @@ const UserList = ({setEditUser, users, fetchUsers}) => {
     <div className="list-page">
       <h3>User List</h3>
       {users.map((user) => (
-          <div className="user-list" key={user.id}>
+          <div className="user-list" key={user._id}>
             <p>
               {user.firstName} {user.lastName}
             </p>
